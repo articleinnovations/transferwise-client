@@ -59,6 +59,9 @@ const transferwise = function(config){
         details
       });
     };
+    this.getTransferDeliveryTime = function(transferId){
+      return request('GET', `/delivery-estimates/${transferId}`);
+    };
     this.deleteRecipientAccount = function(accountId){
       return request('DELETE', `/accounts/${accountId}`);
     };
